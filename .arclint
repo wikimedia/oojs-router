@@ -1,0 +1,15 @@
+{
+	"linters": {
+		"jshint": {
+			"type": "jshint",
+			"include": "(\\.js$)"
+		},
+		"jscs": {
+			"type": "jscs",
+			"include": "(\\.js$)"
+		},
+		"merge-conflict": {
+			"type": "merge-conflict"
+		}
+	}
+}

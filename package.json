@@ -1,0 +1,35 @@
+{
+  "name": "oojs-router",
+  "version": "0.1.0",
+  "description": "Object-oriented call routing library based on OOjs.",
+  "keywords": [
+    "oo",
+    "routing",
+    "library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git clone https://phabricator.wikimedia.org/diffusion/1908/oojs-router.git"
+  },
+  "license": "MIT",
+  "main": "./dist/oojs-router.js",
+  "filename": "oojs-router.min.js",
+  "scripts": {
+    "test": "grunt test",
+    "doc": "jsduck",
+    "prepublish": "grunt build"
+  },
+  "dependencies": {
+      "oojs": "1.1.10"
+  },
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-uglify": "1.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-jscs": "2.8.0"
+  }
+}
