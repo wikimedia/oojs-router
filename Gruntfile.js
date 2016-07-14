@@ -43,7 +43,7 @@ module.exports = function ( grunt ) {
 		},
 		uglify: {
 			options: {
-				banner: '/*! OOjs Router v<%= pkg.version %> | http://oojs-router.mit-license.org */',
+				banner: '/*! OOjs Router v<%= pkg.version %> | http://oojs.mit-license.org */',
 				sourceMap: true,
 				sourceMapIncludeSources: true,
 				report: 'gzip'
