@@ -1,15 +1,9 @@
-/*!
- * Grunt file
- */
-
-/*jshint node:true */
+/* eslint-env node */
 module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-jscs' );
+	grunt.loadNpmTasks( 'grunt-eslint' );
 
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
@@ -29,17 +23,11 @@ module.exports = function ( grunt ) {
 				]
 			}
 		},
-		jshint: {
-			options: {
-				jshintrc: true
-			},
-			dev: [
+		eslint: {
+			all: [
 				'*.js',
 				'src/**/*.js'
 			]
-		},
-		jscs: {
-			dev: '<%= jshint.dev %>'
 		},
 		uglify: {
 			options: {
@@ -54,13 +42,6 @@ module.exports = function ( grunt ) {
 				ext: '.min.js',
 				extDot: 'last'
 			}
-		},
-		watch: {
-			files: [
-				'.{jscsrc,jshintrc}',
-				'<%= jshint.dev %>'
-			],
-			tasks: 'test'
 		}
 	} );
 
@@ -79,6 +60,6 @@ module.exports = function ( grunt ) {
 	} );
 
 	grunt.registerTask( 'build', [ 'clean', 'concat', 'uglify' ] );
-	grunt.registerTask( 'test', [ 'git-build', 'build', 'jshint', 'jscs' ] );
+	grunt.registerTask( 'test', [ 'eslint', 'git-build', 'build' ] );
 	grunt.registerTask( 'default', 'test' );
 };

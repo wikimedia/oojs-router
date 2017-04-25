@@ -1,0 +1,16 @@
+{
+    "extends": "wikimedia",
+
+    "ecmaVersion": 5,
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "globals": {
+        "OO": false,
+        "module": false
+    },
+    "rules": {
+        "dot-notation": [ "error", { "allowKeywords": true } ]
+    }
+}

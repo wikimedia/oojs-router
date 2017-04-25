@@ -113,8 +113,8 @@ OO.Router.prototype.checkRoute = function () {
 OO.Router.prototype.addRoute = function ( path, callback ) {
 	var entry = {
 		path: typeof path === 'string' ?
-			new RegExp( '^' + path.replace( /[\\^$*+?.()|[\]{}]/g, '\\$&' ) + '$' )
-			: path,
+			new RegExp( '^' + path.replace( /[\\^$*+?.()|[\]{}]/g, '\\$&' ) + '$' ) :
+			path,
 		callback: callback
 	};
 	this.register( entry.path.toString(), entry );

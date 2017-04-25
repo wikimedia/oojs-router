@@ -19,15 +19,15 @@
     "prepublish": "grunt build"
   },
   "dependencies": {
-      "oojs": "^1.1.10"
+    "oojs": "^1.1.10"
   },
   "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-wikimedia": "0.3.0",
     "grunt": "1.0.1",
+    "grunt-contrib-clean": "1.1.0",
     "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-clean": "1.0.0",
-    "grunt-contrib-jshint": "1.0.0",
     "grunt-contrib-uglify": "1.0.1",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-jscs": "2.8.0"
+    "grunt-eslint": "19.0.0"
   }
 }
