@@ -191,4 +191,6 @@ OO.Router.prototype.getPath = function () {
  */
 OO.Router.prototype.isSupported = OO.Router.static.isSupported;
 
-module.exports = OO.Router;
+if ( typeof module !== 'undefined' && module.exports ) {
+	module.exports = OO.Router;
+}

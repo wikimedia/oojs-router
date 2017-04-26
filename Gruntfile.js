@@ -4,6 +4,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
+	grunt.loadNpmTasks( 'grunt-karma' );
 
 	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
@@ -42,6 +43,38 @@ module.exports = function ( grunt ) {
 				ext: '.min.js',
 				extDot: 'last'
 			}
+		},
+		karma: {
+			options: {
+				frameworks: [ 'qunit' ],
+				files: [
+					'node_modules/jquery/dist/jquery.js',
+					'node_modules/oojs/dist/oojs.jquery.js',
+					'node_modules/sinon/pkg/sinon.js',
+					'dist/oojs-router.js',
+					'tests/**/*.test.js'
+				],
+				reporters: [ 'dots' ],
+				singleRun: true,
+				autoWatch: false,
+				browserDisconnectTimeout: 5000,
+				browserDisconnectTolerance: 2,
+				browserNoActivityTimeout: 9000
+			},
+			main: {
+				browsers: [ 'Chrome' ],
+				preprocessors: {
+					'dist/*.js': [ 'coverage' ]
+				},
+				reporters: [ 'dots', 'coverage' ],
+				coverageReporter: { reporters: [
+					{ type: 'text-summary' },
+					{ type: 'html', dir: 'coverage/' }
+				] }
+			},
+			other: {
+				browsers: [ 'Firefox' ]
+			}
 		}
 	} );
 
@@ -60,6 +93,6 @@ module.exports = function ( grunt ) {
 	} );
 
 	grunt.registerTask( 'build', [ 'clean', 'concat', 'uglify' ] );
-	grunt.registerTask( 'test', [ 'eslint', 'git-build', 'build' ] );
+	grunt.registerTask( 'test', [ 'eslint', 'git-build', 'build', 'karma' ] );
 	grunt.registerTask( 'default', 'test' );
 };
