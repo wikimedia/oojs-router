@@ -1,7 +1,0 @@
-{
-	"linters": {
-		"merge-conflict": {
-			"type": "merge-conflict"
-		}
-	}
-}
