@@ -1,7 +1,7 @@
 /**
  * Provides navigation routing and location information
  *
- * @class Router
+ * @class OO.Router
  * @extends OO.Registry
  */
 OO.Router = function OoRouter() {
@@ -63,7 +63,7 @@ OO.inheritClass( OO.Router, OO.Registry );
 
 /**
  * @event route
- * @param {jQuery.Event}
+ * @param {jQuery.Event} routeEvent
  */
 
 /* Static Methods */

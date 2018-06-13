@@ -1,0 +1,38 @@
+[
+	{
+		"name": "OOjs Router",
+		"groups": [
+			{
+				"classes": [
+					"OO.Router"
+				]
+			}
+		]
+	},
+	{
+		"name": "Upstream",
+		"groups": [
+			{
+				"name": "OOjs",
+				"classes": ["OO", "OO.EventEmitter", "OO.Factory", "OO.Registry", "OO.EmitterList", "OO.SortedEmitterList"]
+			},
+			{
+				"name": "jQuery",
+				"classes": ["jQuery", "jQuery.Event", "jQuery.Promise" ]
+			},
+			{
+				"name": "JavaScript",
+				"classes": [
+					"Array",
+					"Boolean",
+					"Date",
+					"Function",
+					"Number",
+					"Object",
+					"RegExp",
+					"String"
+				]
+			}
+		]
+	}
+]
