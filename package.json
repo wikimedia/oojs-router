@@ -23,20 +23,20 @@
     "jquery": "3.2.1"
   },
   "devDependencies": {
-    "eslint": "3.19.0",
-    "eslint-config-wikimedia": "0.3.0",
-    "grunt": "1.0.1",
-    "grunt-contrib-clean": "1.1.0",
+    "eslint-config-wikimedia": "0.8.1",
+    "eslint-plugin-qunit": "3.3.1",
+    "grunt": "1.0.3",
+    "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-uglify": "1.0.1",
-    "grunt-eslint": "19.0.0",
-    "grunt-karma": "2.0.0",
-    "karma": "1.6.0",
-    "karma-chrome-launcher": "2.0.0",
-    "karma-coverage": "1.1.1",
-    "karma-firefox-launcher": "1.0.1",
-    "karma-qunit": "1.2.1",
-    "qunitjs": "2.3.2",
-    "sinon": "2.1.0"
+    "grunt-contrib-uglify": "4.0.0",
+    "grunt-eslint": "21.0.0",
+    "grunt-karma": "3.0.0",
+    "karma": "3.0.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-coverage": "1.1.2",
+    "karma-firefox-launcher": "1.1.0",
+    "karma-qunit": "2.1.0",
+    "qunit": "2.6.2",
+    "sinon": "6.3.3"
   }
 }

@@ -27,7 +27,8 @@ module.exports = function ( grunt ) {
 		eslint: {
 			all: [
 				'*.js',
-				'src/**/*.js'
+				'src/**/*.js',
+				'tests/**/*.js'
 			]
 		},
 		uglify: {

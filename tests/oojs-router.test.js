@@ -1,12 +1,10 @@
-/* eslint-env qunit */
-/* global OO, sinon */
 ( function () {
 	var router;
 
 	QUnit.module( 'Router', {
 		beforeEach: function () {
 			router = new OO.Router();
-			this.sandbox = sinon.sandbox.create();
+			this.sandbox = sinon.createSandbox();
 			this.sandbox.stub( router, 'getPath' ).callsFake( function () {
 				return router.testHash.slice( 1 );
 			} );
@@ -70,7 +68,7 @@
 			++count;
 			if ( count === 3 ) {
 				assert.strictEqual( router.testHash, '#initial', 'reset hash' );
-				assert.ok( !spy.called, 'don\'t run callback for prevented route' );
+				assert.notOk( spy.called, 'don\'t run callback for prevented route' );
 				done();
 			}
 		} );
