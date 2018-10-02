@@ -68,10 +68,15 @@ module.exports = function ( grunt ) {
 					'dist/*.js': [ 'coverage' ]
 				},
 				reporters: [ 'dots', 'coverage' ],
-				coverageReporter: { reporters: [
-					{ type: 'text-summary' },
-					{ type: 'html', dir: 'coverage/' }
-				] }
+				coverageReporter: {
+					dir: 'coverage/',
+					subdir: '.',
+					reporters: [
+						{ type: 'clover' },
+						{ type: 'text-summary' },
+						{ type: 'html' }
+					]
+				}
 			},
 			other: {
 				browsers: [ 'Firefox' ]
