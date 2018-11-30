@@ -1,17 +1,10 @@
 {
-    "extends": "wikimedia",
-    "parserOptions": {
-        "ecmaVersion": 5
-    },
-    "env": {
-        "browser": true,
-        "jquery": true
-    },
+    "extends": [
+        "wikimedia/client",
+        "wikimedia/jquery"
+    ],
     "globals": {
         "OO": false,
         "module": false
-    },
-    "rules": {
-        "dot-notation": [ "error", { "allowKeywords": true } ]
     }
 }
