@@ -126,23 +126,45 @@ OO.Router.prototype.addRoute = function ( path, callback ) {
 OO.Router.prototype.route = OO.Router.prototype.addRoute;
 
 /**
- * Navigate to a specific route.
+ * Navigate to a specific route. If history api is not supported this will
+ * gracefully degrade to as if the user browsed to the URI.
+ *
+ * @param {string} title of new page
+ * @param {string} path e.g. '/path/' or '/path/#foo'
+ * @param {boolean} [useReplaceState] instead of pushState to avoid long history queues.
+ */
+OO.Router.prototype.navigateTo = function ( title, path, useReplaceState ) {
+	var history = window.history;
+
+	if ( useReplaceState ) {
+		history.replaceState( null, title, path );
+	} else {
+		history.pushState( null, title, path );
+	}
+};
+
+/**
+ * Navigate to a specific ''hash fragment'' route.
  *
  * @param {string} path String with a route (hash without #).
+ * @param {boolean} [useReplaceState] instead of pushState to avoid long history queues.
+ *  Assumes history API is available.
  */
-OO.Router.prototype.navigate = function ( path ) {
-	var history = window.history;
+OO.Router.prototype.navigate = function ( path, useReplaceState ) {
 	// Take advantage of `pushState` when available, to clear the hash and
 	// not leave `#` in the history. An entry with `#` in the history has
 	// the side-effect of resetting the scroll position when navigating the
 	// history.
-	if ( path === '' && history && history.pushState ) {
+	if ( path === '' ) {
 		// To clear the hash we need to cut the hash from the URL.
 		path = window.location.href.replace( /#.*$/, '' );
-		history.pushState( null, document.title, path );
+		this.navigateTo( document.title, path, useReplaceState );
 		this.checkRoute();
 	} else {
-		window.location.hash = path;
+		path = window.location.pathname + '#' + path.replace( '#', '' );
+		this.navigateTo( document.title, path, useReplaceState );
+		// emit a hash change event for hash fragment changes
+		this.emit( 'hashchange' );
 	}
 };
 
