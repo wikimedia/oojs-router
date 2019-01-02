@@ -1,5 +1,6 @@
 ( function () {
-	var router;
+	var router,
+		docTitle = 'Hello world';
 
 	QUnit.module( 'Router', {
 		beforeEach: function () {
@@ -107,4 +108,41 @@
 		} );
 	} );
 
+	QUnit.module( 'Router#navigate', {
+		beforeEach: function () {
+			this.sandbox = sinon.createSandbox();
+			this.sandbox.stub( document, 'title' ).value( docTitle );
+			this.pushState = this.sandbox.stub( window.history, 'pushState' );
+			this.replaceState = this.sandbox.stub( window.history, 'replaceState' );
+			router = new OO.Router();
+		},
+		afterEach: function () {
+			this.sandbox.verifyAndRestore();
+		}
+	} );
+
+	QUnit.test( '#navigate("")', function ( assert ) {
+		router.navigate( '' );
+		assert.ok( this.pushState.called, 'uses pushState to clear hash' );
+	} );
+	QUnit.test( '#navigate("foo")', function ( assert ) {
+		router.navigate( 'foo' );
+		assert.strictEqual( window.location.hash, '#foo',
+			'Path is treated as the hash and pushState is called'
+		);
+	} );
+	QUnit.test( '#navigateTo("/foo", { useReplaceState: true } )', function ( assert ) {
+		router.navigateTo( 'Hello', { path: '/foo/bar#hash', useReplaceState: true } );
+		assert.ok(
+			this.replaceState.calledWith( null, 'Hello', '/foo/bar#hash' ),
+			'Path is treated as the hash and replaceState is called'
+		);
+	} );
+	QUnit.test( '#navigateTo("#bar" )', function ( assert ) {
+		router.navigateTo( 'Hello', { path: '#bar' } );
+		assert.ok(
+			this.pushState.calledWith( null, 'Hello', '#bar' ),
+			'Path is treated as the hash and pushState is called'
+		);
+	} );
 }() );
