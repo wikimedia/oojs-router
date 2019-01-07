@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0c0912bd_cc0cbab2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-07T19:30:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5805710a_cbdbbcfb",
+      "revId": "47d0b172086e83df758e7d1460fa646bbccea1e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "15374fb1_4b418917",
         "filename": "src/index.js",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2019-01-02T23:12:03Z",
       "side": 1,
       "message": "Note in current form this does not trigger the hashchange event.\nAs a result, it breaks the router.\n\nIdeally this should invoke the router checker directly.",
+      "revId": "47d0b172086e83df758e7d1460fa646bbccea1e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2ec71c2_df57f632",
+        "filename": "src/index.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-07T19:30:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52d4dc10_53d58ba0",
       "revId": "47d0b172086e83df758e7d1460fa646bbccea1e5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
