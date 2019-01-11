@@ -35,7 +35,7 @@
     "karma-coverage": "1.1.2",
     "karma-firefox-launcher": "1.1.0",
     "karma-qunit": "2.1.0",
-    "qunit": "2.8.0",
+    "qunit": "2.9.1",
     "sinon": "7.1.1"
   }
 }
