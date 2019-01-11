@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "15604a19_782d2a28",
+        "filename": "src/index.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-01-11T15:13:20Z",
+      "side": 1,
+      "message": "I think this would read more clearly as:\n\n if ( historySupport ) {\n   if ( path \u003d\u003d\u003d \u0027\u0027 ) {\n   } else {\n   }\n } else {\n }",
+      "revId": "f12f76a2f590e1279897cc339ef4294e3d62d535",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
