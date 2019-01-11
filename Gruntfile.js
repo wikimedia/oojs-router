@@ -25,11 +25,7 @@ module.exports = function ( grunt ) {
 			}
 		},
 		eslint: {
-			all: [
-				'*.js',
-				'src/**/*.js',
-				'tests/**/*.js'
-			]
+			all: '.'
 		},
 		uglify: {
 			options: {
@@ -60,10 +56,17 @@ module.exports = function ( grunt ) {
 				autoWatch: false,
 				browserDisconnectTimeout: 5000,
 				browserDisconnectTolerance: 2,
-				browserNoActivityTimeout: 9000
+				browserNoActivityTimeout: 9000,
+				customLaunchers: {
+					ChromeCustom: {
+						base: 'ChromeHeadless',
+						// Chrome requires --no-sandbox in Docker/CI.
+						flags: ( process.env.CHROMIUM_FLAGS || '' ).split( ' ' )
+					}
+				}
 			},
 			main: {
-				browsers: [ 'Chrome' ],
+				browsers: [ 'ChromeCustom' ],
 				preprocessors: {
 					'dist/*.js': [ 'coverage' ]
 				},
@@ -79,7 +82,10 @@ module.exports = function ( grunt ) {
 				}
 			},
 			other: {
-				browsers: [ 'Firefox' ]
+				options: {
+					logLevel: 'DEBUG'
+				},
+				browsers: [ 'FirefoxHeadless' ]
 			}
 		}
 	} );
@@ -100,5 +106,4 @@ module.exports = function ( grunt ) {
 
 	grunt.registerTask( 'build', [ 'clean', 'concat', 'uglify' ] );
 	grunt.registerTask( 'test', [ 'eslint', 'git-build', 'build', 'karma' ] );
-	grunt.registerTask( 'default', 'test' );
 };
