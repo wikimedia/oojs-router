@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4a18b324_bf381f21",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-17T23:27:36Z",
+      "side": 1,
+      "message": "Not entirely clear from the subject what this commit does. I guess this adds support for a \u0027paths\u0027 option to a method (which one) that relates to native replaceState(). Or it adds support for two things.\n\nhttps://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "217581e91ea8202b6979bf52a444ff34a94b56e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
