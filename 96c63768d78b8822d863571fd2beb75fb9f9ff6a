@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c9c2888_6e4bc921",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-18T00:36:16Z",
+      "side": 1,
+      "message": "does not match the code.",
+      "range": {
+        "startLine": 130,
+        "startChar": 3,
+        "endLine": 130,
+        "endChar": 21
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f4c6cd0_ca42f1a0",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-18T00:36:16Z",
+      "side": 1,
+      "message": "specific strings, or a keyed object, would provide better ergonomics for developers than a boolean, I think. Trying to avoid new unnamed boolean parameters in APIs generally.",
+      "range": {
+        "startLine": 136,
+        "startChar": 57,
+        "endLine": 136,
+        "endChar": 72
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
