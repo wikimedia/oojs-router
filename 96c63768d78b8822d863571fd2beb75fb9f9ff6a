@@ -45,6 +45,75 @@
       "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db68d20e_ef5db4fc",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T16:18:14Z",
+      "side": 1,
+      "message": "push/replaceState\u0027s URL parameter is relative. Do we need to grab the current window.location.pathname? Maybe this can just be `\u0027#\u0027 + path`.\n\npath\u0027s JSDoc say that this is a fragment with the hash so replace may be unwanted.",
+      "range": {
+        "startLine": 164,
+        "startChar": 9,
+        "endLine": 164,
+        "endChar": 65
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d73d7b37_52cab12d",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T16:18:14Z",
+      "side": 1,
+      "message": "This looks like it matches the current behavior except that we emit on router instead of window 👍 You may wish to add a note to the navigateTo() JSDocs that no events are emitted nor callbacks invoked and add tests to navigate() to verify the expected events are emitted.",
+      "range": {
+        "startLine": 166,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 28
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8dca425e_7bd29520",
+        "filename": "tests/oojs-router.test.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T16:18:14Z",
+      "side": 1,
+      "message": "Are both of these calls necessary?",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 26
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
