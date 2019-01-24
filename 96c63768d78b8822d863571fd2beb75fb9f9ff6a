@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ddc6301a_e02dfc7e",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T00:17:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8c9c2888_6e4bc921",
+      "range": {
+        "startLine": 130,
+        "startChar": 3,
+        "endLine": 130,
+        "endChar": 21
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2f4c6cd0_ca42f1a0",
         "filename": "src/index.js",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2019-01-18T00:36:16Z",
       "side": 1,
       "message": "specific strings, or a keyed object, would provide better ergonomics for developers than a boolean, I think. Trying to avoid new unnamed boolean parameters in APIs generally.",
+      "range": {
+        "startLine": 136,
+        "startChar": 57,
+        "endLine": 136,
+        "endChar": 72
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8f5cbc70_8ba66f93",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T00:17:13Z",
+      "side": 1,
+      "message": "How about the latest revision which provides backwards compatibility by repurposing path as options",
+      "parentUuid": "2f4c6cd0_ca42f1a0",
       "range": {
         "startLine": 136,
         "startChar": 57,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "c98ddc5e_e57c3b78",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T00:17:13Z",
+      "side": 1,
+      "message": "After some reflection, I\u0027ve decided to leave the old code intact and simply add the new navigateTo method and deprecate this one.\n\nThis means we can slowly move existing code over to the new method without worry of regressions with the existing code.",
+      "parentUuid": "db68d20e_ef5db4fc",
+      "range": {
+        "startLine": 164,
+        "startChar": 9,
+        "endLine": 164,
+        "endChar": 65
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d73d7b37_52cab12d",
         "filename": "src/index.js",
         "patchSetId": 6
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "2f16ff29_f1f91808",
+        "filename": "src/index.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T00:17:13Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "d73d7b37_52cab12d",
+      "range": {
+        "startLine": 166,
+        "startChar": 0,
+        "endLine": 167,
+        "endChar": 28
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8dca425e_7bd29520",
         "filename": "tests/oojs-router.test.js",
         "patchSetId": 6
@@ -105,6 +201,30 @@
       "writtenOn": "2019-01-18T16:18:14Z",
       "side": 1,
       "message": "Are both of these calls necessary?",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 26
+      },
+      "revId": "96c63768d78b8822d863571fd2beb75fb9f9ff6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4035e99_574b1f19",
+        "filename": "tests/oojs-router.test.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T00:17:13Z",
+      "side": 1,
+      "message": "Just the first it seems",
+      "parentUuid": "8dca425e_7bd29520",
       "range": {
         "startLine": 120,
         "startChar": 0,
