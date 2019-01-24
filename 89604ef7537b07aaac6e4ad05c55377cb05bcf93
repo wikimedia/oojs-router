@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab4abbd_db641bbd",
+        "filename": "src/index.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-24T05:46:29Z",
+      "side": 1,
+      "message": "The description starts here, so should probably repeat the phrase \"Use replaceState .. \".\n\nAlso, assuming it is supported to omit this undefined becoming false-y, should be doc\u0027ed as [options.use..\u003dfalse] to indicate it is optional and defaults to false (from an API perspective).",
+      "range": {
+        "startLine": 134,
+        "startChar": 44,
+        "endLine": 134,
+        "endChar": 45
+      },
+      "revId": "89604ef7537b07aaac6e4ad05c55377cb05bcf93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
