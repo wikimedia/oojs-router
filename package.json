@@ -15,7 +15,8 @@
   "main": "./dist/oojs-router.js",
   "files": [
     "dist/",
-    "AUTHORS.txt"
+    "AUTHORS.txt",
+    "History.md"
   ],
   "scripts": {
     "test": "grunt test",
