@@ -14,7 +14,8 @@
   "license": "MIT",
   "main": "./dist/oojs-router.js",
   "files": [
-    "dist/"
+    "dist/",
+    "AUTHORS.txt"
   ],
   "scripts": {
     "test": "grunt test",
