@@ -19,7 +19,7 @@
   "scripts": {
     "test": "grunt test",
     "doc": "jsduck",
-    "prepublish": "grunt build"
+    "prepare": "grunt build"
   },
   "dependencies": {
     "oojs": "^2.0.0",
