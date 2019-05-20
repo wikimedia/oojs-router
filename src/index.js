@@ -69,6 +69,15 @@ OO.inheritClass( OO.Router, OO.Registry );
 /* Static Methods */
 
 /**
+ * Get current path (hash) from the browser location.
+ *
+ * @return {string} Current path.
+ */
+OO.Router.static.getPath = function () {
+	return window.location.hash.slice( 1 );
+};
+
+/**
  * Determine if current browser supports this router
  *
  * @return {boolean} The browser is supported
@@ -195,13 +204,9 @@ OO.Router.prototype.back = function () {
 };
 
 /**
- * Get current path (hash).
- *
- * @return {string} Current path.
+ * @deprecated Use static method
  */
-OO.Router.prototype.getPath = function () {
-	return window.location.hash.slice( 1 );
-};
+OO.Router.prototype.getPath = OO.Router.static.getPath;
 
 /**
  * @deprecated Use static method
