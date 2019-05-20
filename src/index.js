@@ -11,7 +11,7 @@ OO.Router = function OoRouter() {
 	OO.Router.parent.call( this );
 
 	this.enabled = true;
-	this.oldHash = this.getPath();
+	this.oldHash = OO.Router.static.getPath();
 
 	$( window ).on( 'popstate', function () {
 		router.emit( 'popstate' );
@@ -27,7 +27,7 @@ OO.Router = function OoRouter() {
 
 		if ( router.enabled ) {
 			routeEvent = $.Event( 'route', {
-				path: router.getPath()
+				path: OO.Router.static.getPath()
 			} );
 			router.emit( 'route', routeEvent );
 
@@ -43,7 +43,7 @@ OO.Router = function OoRouter() {
 			router.enabled = true;
 		}
 
-		router.oldHash = router.getPath();
+		router.oldHash = OO.Router.static.getPath();
 	} );
 };
 
@@ -69,6 +69,15 @@ OO.inheritClass( OO.Router, OO.Registry );
 /* Static Methods */
 
 /**
+ * Get current path (hash) from the browser location.
+ *
+ * @return {string} Current path.
+ */
+OO.Router.static.getPath = function () {
+	return window.location.hash.slice( 1 );
+};
+
+/**
  * Determine if current browser supports this router
  *
  * @return {boolean} The browser is supported
@@ -84,7 +93,7 @@ OO.Router.static.isSupported = function () {
  */
 OO.Router.prototype.checkRoute = function () {
 	var id, entry, match,
-		hash = this.getPath();
+		hash = OO.Router.static.getPath();
 
 	for ( id in this.registry ) {
 		entry = this.registry[ id ];
@@ -195,13 +204,9 @@ OO.Router.prototype.back = function () {
 };
 
 /**
- * Get current path (hash).
- *
- * @return {string} Current path.
+ * @deprecated Use static method
  */
-OO.Router.prototype.getPath = function () {
-	return window.location.hash.slice( 1 );
-};
+OO.Router.prototype.getPath = OO.Router.static.getPath;
 
 /**
  * @deprecated Use static method
