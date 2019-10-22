@@ -24,7 +24,7 @@
     "prepare": "grunt build"
   },
   "dependencies": {
-    "oojs": "^2.0.0",
+    "oojs": "^3.0.0",
     "jquery": "3.4.1"
   },
   "devDependencies": {
