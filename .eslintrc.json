@@ -4,7 +4,7 @@
         "wikimedia/jquery"
     ],
     "globals": {
-        "OO": false,
-        "module": false
+        "OO": "readonly",
+        "module": "readonly"
     }
 }
