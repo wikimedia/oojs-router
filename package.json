@@ -24,11 +24,11 @@
     "prepare": "grunt build"
   },
   "dependencies": {
-    "oojs": "^2.0.0",
+    "oojs": "^3.0.0",
     "jquery": "3.4.1"
   },
   "devDependencies": {
-    "eslint-config-wikimedia": "0.14.3",
+    "eslint-config-wikimedia": "0.15.0",
     "grunt": "1.0.4",
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-concat": "1.0.1",
