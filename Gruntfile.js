@@ -50,7 +50,7 @@ module.exports = function ( grunt ) {
 				frameworks: [ 'qunit' ],
 				files: [
 					'node_modules/jquery/dist/jquery.js',
-					'node_modules/oojs/dist/oojs.jquery.js',
+					'node_modules/oojs/dist/oojs.js',
 					'node_modules/sinon/pkg/sinon.js',
 					'dist/oojs-router.js',
 					'tests/**/*.test.js'
