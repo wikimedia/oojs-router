@@ -1,10 +1,14 @@
 {
-    "extends": [
-        "wikimedia/client",
-        "wikimedia/jquery"
-    ],
-    "globals": {
-        "OO": "readonly",
-        "module": "readonly"
-    }
+	"root": true,
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery"
+	],
+	"globals": {
+		"OO": "readonly",
+		"module": "readonly"
+	},
+	"rules": {
+		"no-mixed-spaces-and-tabs": "warn"
+	}
 }

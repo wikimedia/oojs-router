@@ -1,46 +1,46 @@
 {
-  "name": "oojs-router",
-  "version": "0.2.0",
-  "description": "Object-oriented navigation routing library built on top of OOjs.",
-  "keywords": [
-    "oojs-plugin",
-    "routing",
-    "library"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://phabricator.wikimedia.org/diffusion/GOJR/oojs-router.git"
-  },
-  "license": "MIT",
-  "main": "./dist/oojs-router.js",
-  "files": [
-    "dist/",
-    "AUTHORS.txt",
-    "History.md"
-  ],
-  "scripts": {
-    "test": "grunt test",
-    "doc": "jsduck",
-    "prepare": "grunt build"
-  },
-  "dependencies": {
-    "oojs": "6.0.0",
-    "jquery": "3.6.0"
-  },
-  "devDependencies": {
-    "eslint-config-wikimedia": "0.15.3",
-    "grunt": "1.1.0",
-    "grunt-contrib-clean": "2.0.0",
-    "grunt-contrib-concat": "1.0.1",
-    "grunt-contrib-uglify": "4.0.1",
-    "grunt-eslint": "23.0.0",
-    "grunt-karma": "4.0.0",
-    "karma": "6.3.2",
-    "karma-chrome-launcher": "3.1.0",
-    "karma-coverage": "2.0.3",
-    "karma-firefox-launcher": "2.1.0",
-    "karma-qunit": "4.1.2",
-    "qunit": "2.15.0",
-    "sinon": "9.0.2"
-  }
+	"name": "oojs-router",
+	"version": "0.2.0",
+	"description": "Object-oriented navigation routing library built on top of OOjs.",
+	"keywords": [
+		"oojs-plugin",
+		"routing",
+		"library"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://phabricator.wikimedia.org/diffusion/GOJR/oojs-router.git"
+	},
+	"license": "MIT",
+	"main": "./dist/oojs-router.js",
+	"files": [
+		"dist/",
+		"AUTHORS.txt",
+		"History.md"
+	],
+	"scripts": {
+		"test": "grunt test",
+		"doc": "jsduck",
+		"prepare": "grunt build"
+	},
+	"dependencies": {
+		"oojs": "6.0.0",
+		"jquery": "3.6.0"
+	},
+	"devDependencies": {
+		"eslint-config-wikimedia": "0.20.0",
+		"grunt": "1.4.0",
+		"grunt-contrib-clean": "2.0.0",
+		"grunt-contrib-concat": "1.0.1",
+		"grunt-contrib-uglify": "4.0.1",
+		"grunt-eslint": "23.0.0",
+		"grunt-karma": "4.0.0",
+		"karma": "6.3.2",
+		"karma-chrome-launcher": "3.1.0",
+		"karma-coverage": "2.0.3",
+		"karma-firefox-launcher": "2.1.0",
+		"karma-qunit": "4.1.2",
+		"qunit": "2.15.0",
+		"sinon": "9.0.2"
+	}
 }
