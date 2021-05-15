@@ -14,11 +14,11 @@
 		"groups": [
 			{
 				"name": "OOjs",
-				"classes": ["OO", "OO.EventEmitter", "OO.Factory", "OO.Registry", "OO.EmitterList", "OO.SortedEmitterList"]
+				"classes": [ "OO", "OO.EventEmitter", "OO.Factory", "OO.Registry", "OO.EmitterList", "OO.SortedEmitterList" ]
 			},
 			{
 				"name": "jQuery",
-				"classes": ["jQuery", "jQuery.Event", "jQuery.Promise" ]
+				"classes": [ "jQuery", "jQuery.Event", "jQuery.Promise" ]
 			},
 			{
 				"name": "JavaScript",
