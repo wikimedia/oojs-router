@@ -1,4 +1,23 @@
 # OOjs Router Release History
+
+## v0.3.0 / 2021-09-09
+* build: Upgrade qunit from 2.15 to 2.16 (James D. Forrester)
+* build: Updating path-parse to 1.0.7 (libraryupgrader)
+* build: Updating npm dependencies (libraryupgrader)
+* build: Updating npm dependencies (libraryupgrader)
+* build: Upgrade karma and related dependencies to 6.x (James D. Forrester)
+* build: Update package-lock.json via npm audit run (James D. Forrester)
+* [BREAKING CHANGE] Use OOjs v6.0.0, up from v3.0.0 (James D. Forrester)
+* [BREAKING CHANGE] Use jQuery v3.6.0, up from v3.4.1 (James D. Forrester)
+* build: Upgrade all devDependencies to latest (James D. Forrester)
+* build: Add package-lock.json to keep track of dependencies better (James D. Forrester)
+* build: Update eslint-config-wikimedia from 0.14.3 to 0.15.0 (Ed Sanders)
+* [BREAKING CHANGE] Require OOjs 3.0.0, up from 2.0.0 (James D. Forrester)
+* build: Upgrade all devDependencies to latest (James D. Forrester)
+* [BREAKING CHANGE] Require jQuery v3.4.1, up from v3.3.1 (James D. Forrester)
+* build: Upgrade grunt from 1.0.3 to 1.0.4 and eslint-utils dependency from 1.3.1 to 1.4.2 for security issues (James D. Forrester)
+* eslint: Update eslint-config-wikimedia to 0.11.0 (Ed Sanders)
+
 ## v0.2.0 / 2019-02-06
 * build: Misc clean up (Timo Tijhof)
 * Code style fixes and refactoring (Ed Sanders)
