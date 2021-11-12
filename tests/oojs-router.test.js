@@ -22,7 +22,7 @@
 	QUnit.test( '#route, string', function ( assert ) {
 		router.testHash = '';
 		router.route( 'teststring', function () {
-			assert.ok( true, 'run callback for route' );
+			assert.true( true, 'run callback for route' );
 		} );
 		router.testHash = '#teststring';
 		router.emit( 'hashchange' );
@@ -31,7 +31,7 @@
 	QUnit.test( '#route, string with reg ex characters', function ( assert ) {
 		router.testHash = '';
 		router.route( '/$+foo/.*/(x-y)', function () {
-			assert.ok( true, 'run callback for route' );
+			assert.true( true, 'run callback for route' );
 		} );
 		router.testHash = '#/$+foo/.*/(x-y)';
 		router.emit( 'hashchange' );
@@ -69,7 +69,7 @@
 			++count;
 			if ( count === 3 ) {
 				assert.strictEqual( router.testHash, '#initial', 'reset hash' );
-				assert.notOk( spy.called, 'don\'t run callback for prevented route' );
+				assert.false( spy.called, 'don\'t run callback for prevented route' );
 				done();
 			}
 		} );
@@ -84,11 +84,11 @@
 			done2 = assert.async();
 		this.sandbox.stub( window.history, 'back' );
 		router.back().done( function () {
-			assert.ok( true, 'back 1 complete' );
+			assert.true( true, 'back 1 complete' );
 			done1();
 		} );
 		router.back().done( function () {
-			assert.ok( true, 'back 2 complete' );
+			assert.true( true, 'back 2 complete' );
 			done2();
 		} );
 		router.emit( 'popstate' );
@@ -98,12 +98,12 @@
 		var historyStub = this.sandbox.stub( window.history, 'back' ),
 			done = assert.async();
 		router.on( 'popstate', function () {
-			assert.ok( false, 'this assertion is not supposed to get called' );
+			assert.true( false, 'this assertion is not supposed to get called' );
 		} );
 
 		router.back().done( function () {
-			assert.ok( historyStub.called, 'history back has been called' );
-			assert.ok( true, 'back without popstate complete' );
+			assert.true( historyStub.called, 'history back has been called' );
+			assert.true( true, 'back without popstate complete' );
 			done();
 		} );
 	} );
@@ -123,7 +123,7 @@
 
 	QUnit.test( '#navigate("")', function ( assert ) {
 		router.navigate( '' );
-		assert.ok( this.pushState.called, 'uses pushState to clear hash' );
+		assert.true( this.pushState.called, 'uses pushState to clear hash' );
 	} );
 	QUnit.test( '#navigate("foo")', function ( assert ) {
 		router.navigate( 'foo' );
@@ -133,14 +133,14 @@
 	} );
 	QUnit.test( '#navigateTo("/foo", { useReplaceState: true } )', function ( assert ) {
 		router.navigateTo( 'Hello', { path: '/foo/bar#hash', useReplaceState: true } );
-		assert.ok(
+		assert.true(
 			this.replaceState.calledWith( null, 'Hello', '/foo/bar#hash' ),
 			'Path is treated as the hash and replaceState is called'
 		);
 	} );
 	QUnit.test( '#navigateTo("#bar" )', function ( assert ) {
 		router.navigateTo( 'Hello', { path: '#bar' } );
-		assert.ok(
+		assert.true(
 			this.pushState.calledWith( null, 'Hello', '#bar' ),
 			'Path is treated as the hash and pushState is called'
 		);
