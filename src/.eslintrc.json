@@ -1,0 +1,12 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery",
+		"wikimedia/jsduck"
+	],
+	"globals": {
+		"OO": "readonly",
+		"module": "readonly"
+	}
+}

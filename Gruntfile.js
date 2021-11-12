@@ -1,4 +1,5 @@
-/* eslint-env node */
+'use strict';
+
 module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
@@ -91,7 +92,7 @@ module.exports = function ( grunt ) {
 	} );
 
 	grunt.registerTask( 'git-build', function () {
-		var done = this.async();
+		const done = this.async();
 		require( 'child_process' ).exec( 'git rev-parse HEAD', function ( err, stout, stderr ) {
 			if ( !stout || err || stderr ) {
 				grunt.log.err( err || stderr );
