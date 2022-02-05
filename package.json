@@ -24,8 +24,8 @@
 		"prepare": "grunt build"
 	},
 	"dependencies": {
-		"oojs": "6.0.0",
-		"jquery": "3.6.0"
+		"jquery": "3.6.0",
+		"oojs": "6.0.0"
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.21.0",
