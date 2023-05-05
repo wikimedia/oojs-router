@@ -13,11 +13,11 @@ OO.Router = function OoRouter() {
 	this.enabled = true;
 	this.oldHash = this.getPath();
 
-	$( window ).on( 'popstate', function () {
+	window.addEventListener( 'popstate', function () {
 		router.emit( 'popstate' );
 	} );
 
-	$( window ).on( 'hashchange', function () {
+	window.addEventListener( 'hashchange', function () {
 		router.emit( 'hashchange' );
 	} );
 
