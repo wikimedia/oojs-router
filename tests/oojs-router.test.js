@@ -1,6 +1,7 @@
 ( function () {
-	var router,
-		docTitle = 'Hello world';
+	let router;
+
+	const docTitle = 'Hello world';
 
 	QUnit.module( 'Router', {
 		beforeEach: function () {
@@ -49,8 +50,9 @@
 	} );
 
 	QUnit.test( 'on route', function ( assert ) {
-		var count = 0,
-			spy = this.sandbox.spy(),
+		let count = 0;
+
+		const spy = this.sandbox.spy(),
 			done = assert.async();
 
 		router.testHash = '';
@@ -80,7 +82,7 @@
 	} );
 
 	QUnit.test( 'on back', function ( assert ) {
-		var done1 = assert.async(),
+		const done1 = assert.async(),
 			done2 = assert.async();
 		this.sandbox.stub( window.history, 'back' );
 		router.back().done( function () {
@@ -95,7 +97,7 @@
 	} );
 
 	QUnit.test( 'on back without popstate', function ( assert ) {
-		var historyStub = this.sandbox.stub( window.history, 'back' ),
+		const historyStub = this.sandbox.stub( window.history, 'back' ),
 			done = assert.async();
 		router.on( 'popstate', function () {
 			assert.true( false, 'this assertion is not supposed to get called' );
