@@ -8,7 +8,7 @@ OO.Router = function OoRouter() {
 	const router = this;
 
 	// Parent constructor
-	OO.Router.parent.call( this );
+	OO.Router.super.call( this );
 
 	this.enabled = true;
 	this.oldHash = this.getPath();
