@@ -1,6 +1,6 @@
 {
 	"name": "oojs-router",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "Object-oriented navigation routing library built on top of OOjs.",
 	"keywords": [
 		"oojs-plugin",

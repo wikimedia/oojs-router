@@ -1,6 +1,6 @@
 # OOjs Router Release History
 
-## UNRELEASED
+## v0.5.0 / 2024/03/04
 * [BREAKING CHANGE] Require oojs 7.0.1, up from 6.0.0 (James D. Forrester)
 * [BREAKING CHANGE] Re-write to require ES6, up from ES5 (James D. Forrester)
 * [BREAKING CHANGE] Raise jQuery requirement from v3.6.0 to v3.7.1 (James D. Forrester)
