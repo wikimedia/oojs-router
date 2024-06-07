@@ -13,15 +13,15 @@ OO.Router = function OoRouter() {
 	this.enabled = true;
 	this.oldHash = this.getPath();
 
-	window.addEventListener( 'popstate', function () {
+	window.addEventListener( 'popstate', () => {
 		router.emit( 'popstate' );
 	} );
 
-	window.addEventListener( 'hashchange', function () {
+	window.addEventListener( 'hashchange', () => {
 		router.emit( 'hashchange' );
 	} );
 
-	this.on( 'hashchange', function () {
+	this.on( 'hashchange', () => {
 		// event.originalEvent.newURL is undefined on Android 2.x
 		let routeEvent;
 
@@ -114,7 +114,7 @@ OO.Router.prototype.checkRoute = function () {
 OO.Router.prototype.addRoute = function ( path, callback ) {
 	const entry = {
 		path: typeof path === 'string' ?
-			// eslint-disable-next-line security/detect-non-literal-regexp
+
 			new RegExp( '^' + path.replace( /[\\^$*+?.()|[\]{}]/g, '\\$&' ) + '$' ) :
 			path,
 		callback: callback
@@ -174,7 +174,7 @@ OO.Router.prototype.back = function () {
 	const router = this,
 		deferred = $.Deferred();
 
-	this.once( 'popstate', function () {
+	this.once( 'popstate', () => {
 	// eslint-disable-next-line no-use-before-define
 		clearTimeout( timeoutID );
 		deferred.resolve();
@@ -188,7 +188,7 @@ OO.Router.prototype.back = function () {
 	// and resolving the deferred request for them individually.
 	// See https://connect.microsoft.com/IE/feedback/details/793618/history-back-popstate-not-working-as-expected-in-webview-control
 	// Give browser a few ms to update its history.
-	const timeoutID = setTimeout( function () {
+	const timeoutID = setTimeout( () => {
 		router.off( 'popstate' );
 		deferred.resolve();
 	}, 50 );
