@@ -6,5 +6,8 @@
 	],
 	"globals": {
 		"sinon": "readonly"
+	},
+	"rules": {
+		"no-jquery/no-done-fail": "warn"
 	}
 }
